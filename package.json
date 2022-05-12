@@ -1,13 +1,13 @@
 {
   "name": "virtuoso-connector",
-  "description": "Run SPARQL queries fast directly directly on Virtuoso database with support of connection pool.",
+  "description": "Run SPARQL/SQL queries directly on Virtuoso database with connection pool support.",
   "keywords": [
     "virtuoso",
     "virtuoso isql",
     "virtuoso sparql",
     "sparql"
   ],
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
