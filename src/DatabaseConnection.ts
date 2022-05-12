@@ -1,6 +1,5 @@
 import { TaskMap } from 'promise-based-task';
 import { ChildTask } from './utils/ChildTask';
-import VirtuosoResultParser from './utils/VirtuosoResult.parser';
 import { fork, ChildProcess } from 'child_process';
 import * as path from 'path';
 
@@ -14,6 +13,7 @@ import type {
   IChildTaskSuccessResponse,
   IDatabaseConnection,
 } from './types';
+import { queryToString, responseToTriples } from './helpers';
 
 export class DatabaseConnection implements IDatabaseConnection {
   // Task related properties
@@ -33,7 +33,7 @@ export class DatabaseConnection implements IDatabaseConnection {
   }
 
   /**
-   * Executes query directly in ISQL
+   * Executes ISQL query or procedure
    * @param query
    * @param procedureCalls
    */
@@ -50,24 +50,13 @@ export class DatabaseConnection implements IDatabaseConnection {
   /**
    * Execute SPARQL query
    * @param query
-   * @param checkVoidExpression
+   * @param checkVoidExpression (Virtuoso internal)
    */
   async query<T>(
     query: string | SparqlQuery | TemplateResult<unknown>,
     checkVoidExpression = true,
   ): Promise<T> {
-    const queryString: string = (() => {
-      if (typeof query === 'string') {
-        return query;
-      }
-      if ('build' in (query as object)) {
-        return (query as SparqlQuery).build();
-      }
-      if ('toString' in (query as object)) {
-        return query.toString();
-      }
-      throw new Error(`"query" parameter is invalid type`);
-    })();
+    const queryString = queryToString(query);
 
     const command: IChildTask = {
       id: String(++this.lastTaskId),
@@ -80,6 +69,7 @@ export class DatabaseConnection implements IDatabaseConnection {
 
   /**
    * Cancel all running queries and destroy all connections
+   * class instance can be re-used later
    */
   destroy() {
     this.childProcesses.forEach((childProcess) => childProcess.disconnect());
@@ -96,20 +86,6 @@ export class DatabaseConnection implements IDatabaseConnection {
   protected rejectTask(message: IChildTaskErrorResponse) {
     this.tasks.get(message.id)?.reject(message.error);
     this.tasks.delete(message.id);
-  }
-
-  protected responseToTriples(message: IChildTaskSuccessResponse) {
-    const parser = new VirtuosoResultParser();
-    parser.write(message.result);
-    parser.end();
-
-    return new Promise((resolve, reject) => {
-      const parts: unknown[] = [];
-      parser
-        .on('data', (data) => parts.push(data))
-        .on('error', reject)
-        .on('end', () => resolve(parts));
-    });
   }
 
   /**
@@ -183,7 +159,7 @@ export class DatabaseConnection implements IDatabaseConnection {
         return this.resolveTask(message);
       }
 
-      this.responseToTriples(message).then((result: typeof message['result']) => {
+      responseToTriples(message).then((result: typeof message['result']) => {
         this.resolveTask({
           ...message,
           result,
