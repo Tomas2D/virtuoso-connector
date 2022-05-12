@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - name: 'yarn:install'
+        run: yarn install
+        env:
+          CI: true
+      - name: build
+        run: yarn build
