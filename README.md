@@ -1,6 +1,6 @@
 # 🔗 virtuoso-connector
 
-Package that allows you to create a direct connection to the [https://virtuoso.openlinksw.com/](Virtuoso) 
+Package that allows you to create a direct connection to the [Virtuoso](https://virtuoso.openlinksw.com/) 
 database and run queries on it. Connection can be used to execute both SQL and SPARQL queries, or even 
 internal database stored procedures. 
 
