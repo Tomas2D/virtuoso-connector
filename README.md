@@ -9,14 +9,14 @@ internal database stored procedures.
 Since there is no native Virtuoso driver for NodeJS, the only option is to use Java bindings, which enables
 communication between a JDBC driver and a NodeJS application.
 
-The `@naxmefy/jdbc25` package provides support for communication with the JDBC driver, which is
+The `@naxmefy/jdbc` package provides support for communication with the JDBC driver, which is
 appropriate because Virtuoso provides a JDBC driver and thus they can be
 used together. The only disadvantage of this approach is that the process
 needs to start JVM and whenever it crashes, it crashes the whole application.
-To prevent the crash of the whole application, the `DatabaseConnection` manages a pool of child processes (`DatabaseConnectionChild`)
+To prevent the crash of the whole application, the `DatabaseConnection` **manages a pool of child processes** (forks) (`DatabaseConnectionChild`)
 which are responsible for the queries execution.
 
-Selection of the child process is made by `Round Robin load balancing` mechanism.
+Selection of the child process is made by `Round Robin` load balancing mechanism.
 Delegation of the execution is done in the form of sending messages through the IPC channel, with a unified
 interface defined in `types.ts` file. Once the query inside the message is being
 resolved by the child process, it sends a new message with the response back
@@ -27,7 +27,8 @@ Because the child processes are detached from the parent, they do not crash the 
 ## ⭐️ Features
 
 - pool handling,
-- support of SPARQL query builder syntax (`@tpluscode/rdf-string`, `@tpluscode/sparql-builder`)
+- support of SPARQL query builder syntax (`@tpluscode/rdf-string`, `@tpluscode/sparql-builder`),
+- support for executing stored procedures or even SQL
 
 ## 🚀 Installation
 
@@ -55,15 +56,17 @@ const db = new DatabaseConnection({
   poolSize: 2 // max active connections
 })
 
-await db.query(`
+const results = await db.query(`
   SELECT ?s ?p ?o 
   WHERE { ?s ?p ?o }
 `)
+
+results.forEach(result => {
+  // terms are created via DataFactory according to the standard
+  console.info(result.s, result.p, result.o)
+})
 ```
 
-## TODO
-
-- [ ] Add deep insight description
+## 📃 TODO
 - [ ] Add tests
-- [ ] Add examples
 - [ ] Publish package

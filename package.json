@@ -4,6 +4,7 @@
   "keywords": [
     "virtuoso",
     "virtuoso isql",
+    "virtuoso sparql",
     "sparql"
   ],
   "version": "0.0.1",
@@ -18,8 +19,8 @@
   "private": false,
   "scripts": {
     "build": "rm -Rf lib; tsc -p tsconfig.build.json",
-    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "eslint": "eslint \"{src,test}/**/*.ts\" --fix",
+    "prettier": "prettier --write \"src/**/*.ts\"",
     "changelog": "npx gitmoji-changelog",
     "release": "yarn version",
     "version": "yarn changelog && code --wait CHANGELOG.md && git add README.md CHANGELOG.md",
@@ -54,7 +55,8 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint \"{src,test}/**/*.ts\" --fix"
+      "eslint --fix",
+      "prettier --write"
     ]
   }
 }
