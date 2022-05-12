@@ -26,13 +26,11 @@ Because the child processes are detached from the parent, they do not crash the 
 
 ## ⭐️ Features
 
-- pool handling,
+- connection pool,
 - support of SPARQL query builder syntax (`@tpluscode/rdf-string`, `@tpluscode/sparql-builder`),
 - support for executing stored procedures or even SQL
 
 ## 🚀 Installation
-
-TODO: not published yet
 
 ```
 yarn add virtuoso-connector
@@ -40,6 +38,8 @@ yarn add virtuoso-connector
 ```
 npm install virtuoso-connector
 ```
+
+**Note: Install peer dependencies if needed** 
 
 ## 🤘🏻 Usage
 
@@ -50,7 +50,7 @@ const db = new DatabaseConnection({
   url: 'jdbc:virtuoso://127.0.0.1:1111/CHARSET=UTF-8',
   username: 'dba',
   password: 'dba',
-  driverPath: '/usr/local/virtuoso-opensource/lib/jdbc-4.3/virtjdbc4_3.jar',
+  driverPath: '/usr/local/vos/lib/jdbc-4.2/virtjdbc4_2.jar',
   lazy: false,
   maxQueryTimeout: 360, // optional (in seconds), 0 = unlimited
   poolSize: 2 // max active connections
@@ -59,14 +59,34 @@ const db = new DatabaseConnection({
 const results = await db.query(`
   SELECT ?s ?p ?o 
   WHERE { ?s ?p ?o }
+  LIMIT 10
 `)
 
 results.forEach(result => {
-  // terms are created via DataFactory according to the standard
   console.info(result.s, result.p, result.o)
 })
+
+// Destroy connection
+db.destroy()
+```
+
+```javascript
+// Example preview of results (with LIMIT 1)
+[{
+  s: NamedNode {
+    termType: 'NamedNode',
+    value: 'http://www.openlinksw.com/virtrdf-data-formats#default-iid'
+  },
+  p: NamedNode {
+	termType: 'NamedNode',
+    value: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'
+  },
+  o: NamedNode {
+    termType: 'NamedNode',
+	value: 'http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat'
+  } 
+}]
 ```
 
 ## 📃 TODO
 - [ ] Add tests
-- [ ] Publish package
