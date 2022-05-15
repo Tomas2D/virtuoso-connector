@@ -1,0 +1,11 @@
+{
+  "extends": ["../.eslintrc.json"],
+  "root": false,
+  "parserOptions": {
+    "project": ["../tsconfig.json", "../tsconfig.test.json"],
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}

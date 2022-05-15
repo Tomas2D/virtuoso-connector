@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Database connection with queries Retrieves data 1`] = `
+Array [
+  Object {
+    "name": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      },
+      "language": "en",
+      "termType": "Literal",
+      "value": "Book #1",
+    },
+    "price": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/2001/XMLSchema#integer",
+      },
+      "language": "",
+      "termType": "Literal",
+      "value": "100",
+    },
+  },
+  Object {
+    "name": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      },
+      "language": "en",
+      "termType": "Literal",
+      "value": "Book #1",
+    },
+    "price": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/2001/XMLSchema#integer",
+      },
+      "language": "",
+      "termType": "Literal",
+      "value": "200",
+    },
+  },
+  Object {
+    "name": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      },
+      "language": "en",
+      "termType": "Literal",
+      "value": "Book #2",
+    },
+    "price": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/2001/XMLSchema#integer",
+      },
+      "language": "",
+      "termType": "Literal",
+      "value": "100",
+    },
+  },
+  Object {
+    "name": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      },
+      "language": "en",
+      "termType": "Literal",
+      "value": "Book #2",
+    },
+    "price": Literal {
+      "datatype": NamedNode {
+        "termType": "NamedNode",
+        "value": "http://www.w3.org/2001/XMLSchema#integer",
+      },
+      "language": "",
+      "termType": "Literal",
+      "value": "200",
+    },
+  },
+]
+`;

@@ -17,7 +17,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": false,
-    "typeRoots": ["./@types", "./node_modules/@types"]
+    "typeRoots": ["./@types", "./node_modules/@types"],
+    "allowJs": false
   },
-  "include": ["src", "test", "@types"],
+  "include": ["src", "test", "@types"]
 }

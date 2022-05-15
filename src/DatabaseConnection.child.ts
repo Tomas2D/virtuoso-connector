@@ -52,6 +52,7 @@ class DatabaseConnectionChild implements IDatabaseConnection {
 
     const sMin =
       min([countIndex, selectIndex, constructIndex, askIndex].filter((i) => i !== -1)) ?? Infinity;
+
     if (sMin === 0) {
       return true;
     }
