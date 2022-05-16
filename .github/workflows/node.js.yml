@@ -9,15 +9,40 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    services:
+      virtuoso:
+        image: pkleef/virtuoso-opensource-7:7.2.7-dev
+        env:
+          DBA_PASSWORD: dba
+        ports:
+          - 8890:8890
+          - 1111:1111
+        options: >-
+          --health-cmd "echo 'OK'"
+          --health-interval 10s
+          --health-timeout 10s
+          --health-retries 1
+          --health-start-period 60s
     steps:
       - uses: actions/checkout@v2
-      - name: node
-        uses: actions/setup-node@v1
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 16.14.2
+      - name: Use Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9.12
       - name: 'yarn:install'
         run: yarn install
         env:
           CI: true
       - name: build
         run: yarn build
+      - name: test
+        env:
+          DB_URL: "jdbc:virtuoso://127.0.0.1:1111/CHARSET=UTF-8"
+          DB_USER: "dba"
+          DB_PASS: "dba"
+        run: yarn test

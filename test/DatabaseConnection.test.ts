@@ -1,4 +1,5 @@
 import { DatabaseConnection } from '../src';
+import * as path from 'path';
 
 describe('Database connection with queries', () => {
   let db: DatabaseConnection;
@@ -6,7 +7,7 @@ describe('Database connection with queries', () => {
 
   beforeAll(async () => {
     db = new DatabaseConnection({
-      driverPath: process.env.DB_DRIVER_PATH,
+      driverPath: path.join(__dirname, 'assets/virtjdbc4_2.jar'),
       url: process.env.DB_URL,
       username: process.env.DB_USER,
       password: process.env.DB_PASS,
