@@ -78,15 +78,12 @@ db.destroy()
     value: 'http://www.openlinksw.com/virtrdf-data-formats#default-iid'
   },
   p: NamedNode {
-	termType: 'NamedNode',
+    termType: 'NamedNode', 
     value: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'
   },
   o: NamedNode {
     termType: 'NamedNode',
-	value: 'http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat'
+    value: 'http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat'
   } 
 }]
 ```
-
-## 📃 TODO
-- [ ] Add tests
