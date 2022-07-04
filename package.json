@@ -13,7 +13,14 @@
   "files": [
     "lib"
   ],
-  "repository": "git@github.com:Tomas2D/virtuoso-connector.git",
+  "homepage": "https://github.com/Tomas2D/virtuoso-connector#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomas2D/virtuoso-connector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tomas2D/virtuoso-connector/issues"
+  },
   "author": "Tomáš Dvořák <toomas2d@gmail.com>",
   "license": "MIT",
   "private": false,
