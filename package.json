@@ -36,37 +36,37 @@
     "test:coverage": "ts-node node_modules/.bin/jest --coverage"
   },
   "peerDependencies": {
-    "java": "^0.12.2",
     "@naxmefy/jdbc": "^0.13.3",
+    "java": "^0.12.2",
     "jsonstream2": "^3.0.0",
     "lodash": ">=4.x",
     "promise-based-task": "^1.3.0",
     "rdf-data-factory": "^1.1.0"
   },
   "devDependencies": {
-    "jest": "^28.1.0",
-    "dotenv": "^16.0.1",
-    "ts-jest": "^28.0.2",
-    "ts-node": "^10.7.0",
-    "@types/jest": "^27.5.1",
     "@naxmefy/jdbc": "^0.13.3",
-    "java": "^0.12.2",
-    "jsonstream2": "^3.0.0",
-    "lodash": ">=4.x",
-    "promise-based-task": "^1.3.0",
-    "rdf-data-factory": "^1.1.0",
     "@tpluscode/rdf-string": "^0.2.25",
     "@tpluscode/sparql-builder": "^0.3.21",
+    "@types/jest": "^27.5.1",
     "@types/lodash": "^4.14.182",
     "@types/node": "^16.11.4",
     "@types/readable-stream": "^2.3.13",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "dotenv": "^16.0.1",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "husky": "^8.0.1",
+    "java": "^0.12.2",
+    "jest": "^28.1.0",
+    "jsonstream2": "^3.0.0",
     "lint-staged": "^10.5.4",
+    "lodash": ">=4.x",
     "prettier": "^2.6.2",
+    "promise-based-task": "^1.3.0",
+    "rdf-data-factory": "^1.1.0",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
   "husky": {
@@ -79,5 +79,8 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "resolutions": {
+    "async": ">=2.6.4"
   }
 }
