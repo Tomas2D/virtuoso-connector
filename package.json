@@ -47,7 +47,7 @@
     "@naxmefy/jdbc": "^0.13.3",
     "@tpluscode/rdf-string": "^0.2.25",
     "@tpluscode/sparql-builder": "^0.3.21",
-    "@types/jest": "^27.5.1",
+    "@types/jest": "^28.1.4",
     "@types/lodash": "^4.14.182",
     "@types/node": "^16.11.4",
     "@types/readable-stream": "^2.3.13",
