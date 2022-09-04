@@ -52,7 +52,7 @@ export class DatabaseConnection implements IDatabaseConnection {
    * @param query
    * @param checkVoidExpression (Virtuoso internal)
    */
-  async query<T>(
+  async query<T extends any = any>(
     query: string | SparqlQuery | TemplateResult<unknown>,
     checkVoidExpression = true,
   ): Promise<T> {
