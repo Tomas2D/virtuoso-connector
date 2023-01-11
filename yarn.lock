@@ -771,9 +771,9 @@
     "@zazuko/rdf-vocabularies" "*"
 
 "@tpluscode/sparql-builder@^0.3.21":
-  version "0.3.24"
-  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-0.3.24.tgz#8fccd8f1323597ca3ad11b7a86c469529ed774f6"
-  integrity sha512-5DjQafLbdAOn3BwHv6eianSfO8jV54IJDy8usY6rO8Rz81e+BkpdUcqzx9gHoghISVgffgq2hwSLL44Fa/PG+Q==
+  version "0.3.25"
+  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-0.3.25.tgz#19168ecd5864a3be3ffd3f2a452224d3d3b38743"
+  integrity sha512-fp6r7J9j9+n39Wo6jfXD5IWffvjZ0hHmumRN4Ht2dlsr3aupKKHAwISbqb2Yo3QlDvgdT9KUKbkEcJLrXaLupg==
   dependencies:
     "@rdf-esm/data-model" "^0.5.4"
     "@rdf-esm/term-set" "^0.5.0"
