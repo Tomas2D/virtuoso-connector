@@ -771,15 +771,16 @@
     "@zazuko/rdf-vocabularies" ">=2023.01.17"
 
 "@tpluscode/sparql-builder@^0.3.21":
-  version "0.3.26"
-  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-0.3.26.tgz#d21dec44f549adfd74786a895766486d1b01bf32"
-  integrity sha512-LwCz852OJcENTdhjqnuNMajCYkNZ9ONXAAZiSRELQtjlPBePpqs9korMIM9MmlO/Rwxnpxe5q8zO79muoph5fQ==
+  version "0.3.30"
+  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-0.3.30.tgz#ddf2693688eada0c89e9d89d5673feada817f834"
+  integrity sha512-TS3+gKMHiF+SpF4rHfclAhT130+nH6IcJODgpKgu5OKBcSCiBs5tooAAf5Mj5zNn2F+a6GGS1w3DYQ0fTYahIg==
   dependencies:
     "@rdf-esm/data-model" "^0.5.4"
     "@rdf-esm/term-set" "^0.5.0"
     "@rdfjs/types" "*"
     "@tpluscode/rdf-ns-builders" "^2.0.0"
     "@tpluscode/rdf-string" "^0.2.27"
+    "@types/sparql-http-client" "^2"
     debug "^4.1.1"
 
 "@tsconfig/node10@^1.0.7":
@@ -908,6 +909,13 @@
   dependencies:
     "@types/node" "*"
     safe-buffer "~5.1.1"
+
+"@types/sparql-http-client@^2":
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/@types/sparql-http-client/-/sparql-http-client-2.2.8.tgz#c7b12eea9dbda1f539d0b415ea67532ecbe3ec6a"
+  integrity sha512-l6kcSp57s0K4kGEWqjGR/LEe/Fya11Kd5S9Ta8gfIiRyESmvvA8JePPaTnq4r0MT6FKvNMJ7/KS15B85Fxm5ng==
+  dependencies:
+    rdf-js "^4.0.2"
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
