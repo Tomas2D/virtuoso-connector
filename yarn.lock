@@ -885,9 +885,9 @@
   integrity sha512-CmR8+Tsy95hhwtZBKJBs0/FFq4XX7sDZHlGGf+0q+BRZfMbOTkzkj0AFAuTyXbObDIoanaBBW0+KEW+m3N16Wg==
 
 "@types/node@^16.11.4":
-  version "16.18.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.15.tgz#260fbad5f819744c63467b429b3ca00894f3c72c"
-  integrity sha512-a5RBe4vw4bFITL6351US4glblsc0m7JKfm9RpSl9f/rSAXmZmulIEzk7fvpWFr14iJCvKxV7sQUqI0bwee0iVw==
+  version "16.18.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.19.tgz#5a2c0c2fdcfcf1ff96b8f43447c81b40aa65ba2f"
+  integrity sha512-Qd2EhjbjOKZuHMn+IJc2EUYwdkJw9kgsZ3k2zdyi2uIBH0hU00Yd9T5rpMq6KRiFvpscpXUQRjJSaJHH29ei8A==
 
 "@types/prettier@^2.1.5":
   version "2.6.3"
