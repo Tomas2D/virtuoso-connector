@@ -60,7 +60,7 @@
     "java": "^0.12.2",
     "jest": "^28.1.0",
     "jsonstream2": "^3.0.0",
-    "lint-staged": "^14.0.0",
+    "lint-staged": "^15.0.1",
     "lodash": ">=4.x",
     "prettier": "^3.0.0",
     "promise-based-task": "^2.0.3",
