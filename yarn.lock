@@ -964,9 +964,9 @@
     "@rdfjs/types" "*"
 
 "@types/readable-stream@^4.0.0":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/readable-stream/-/readable-stream-4.0.4.tgz#21645a86e5214dc0b5c872b506653aa2512c1e33"
-  integrity sha512-NSAiePj3Iq3kBArfpUWRNX/mRw8DibYD6YhNCIJDfUP/iIOQYsNJgtHyjpbuZlcbL7TxILS8qYjY/nXXvtcFQg==
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@types/readable-stream/-/readable-stream-4.0.5.tgz#7a82f920748f81e6f6e6d062d6d3961e5731b296"
+  integrity sha512-QzFG+b0/vKI8myBgHhUja5C8ZJr4vaAeSXNYbqedm3Pr8byTgkNf1OC2/16yQTn2H2ZpQpHr7sLKS13XWpKaCQ==
   dependencies:
     "@types/node" "*"
     safe-buffer "~5.1.1"
