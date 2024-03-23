@@ -46,7 +46,7 @@
   "devDependencies": {
     "@naxmefy/jdbc": "^0.13.3",
     "@tpluscode/rdf-string": "^1.0.2",
-    "@tpluscode/sparql-builder": "^0.3.31",
+    "@tpluscode/sparql-builder": "^2.0.0",
     "@types/jest": "^28.1.5",
     "@types/lodash": "^4.14.182",
     "@types/node": "^20.1.2",
