@@ -780,7 +780,7 @@
     "@types/rdfjs__namespace" "^2.0.2"
     "@zazuko/prefixes" "^2.0.1"
 
-"@tpluscode/rdf-string@^1.0.2", "@tpluscode/rdf-string@^1.0.3":
+"@tpluscode/rdf-string@^1.0.2", "@tpluscode/rdf-string@^1.3.0":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@tpluscode/rdf-string/-/rdf-string-1.3.3.tgz#7bd989b4745240eb0fb8b140dceaf54715151b0d"
   integrity sha512-BiBVkX3EVRApo6DNpXuq7Mh87tPX/3aD8m1tjxe4TT6piRrmwbIT/QRrlNdAjt5cAEBRwH8cp+GFTOb/X4Y8Ww==
@@ -793,14 +793,14 @@
     "@zazuko/prefixes" ">=1"
 
 "@tpluscode/sparql-builder@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-2.0.0.tgz#4b985ca7fb9c066483eb00bd9725776d1a027484"
-  integrity sha512-PH/F4E69BUuTHQTUgfKDjbBp6Q7OXGnXcADvGpBnBg3kDkq11tJpRHUtmBPmaz2kL3RreX7xW5UvQdPIh8mrBg==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-2.0.3.tgz#7a116347126551933b50dd169770d0b5659de8a5"
+  integrity sha512-VoV2Ifv8QSaj7uXagPkMzcUxEEhJbn3S+etz82O6fTUvrrn3ndwB/LgNfeSwc2NxPj3kBkyCb5EVeaD7YawOjw==
   dependencies:
     "@rdfjs/data-model" "^2"
     "@rdfjs/term-set" "^2"
     "@rdfjs/types" "*"
-    "@tpluscode/rdf-string" "^1.0.3"
+    "@tpluscode/rdf-string" "^1.3.0"
     "@types/sparql-http-client" "^3.0.0"
     anylogger "^1.0.11"
 
