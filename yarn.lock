@@ -3125,9 +3125,9 @@ progress@^2.0.0:
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
 promise-based-task@^2.0.3:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/promise-based-task/-/promise-based-task-2.2.2.tgz#0e548fb1f0309aa54f4a4b2bc4dd1c52aeee17a2"
-  integrity sha512-vb7mEoHl0fLtqgwCpRWQxP9DLEMhVy8bYraRtK99mkminzDXkyl7HAAwj8vYuZqe3ZG+Omsd2shUC6zS1UPCog==
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/promise-based-task/-/promise-based-task-2.2.3.tgz#adfc14b7557d5654c87b5b7c11d8864355a51a59"
+  integrity sha512-FjZJMyBI/LFJ/i8P+9s1FcD8X9ZHkhPx4eNLTK6p9fh69ORcQP/hyB9i2OetXHg73r9KhKOdFZksl9qL7GsJWA==
 
 prompts@^2.0.1:
   version "2.4.2"
