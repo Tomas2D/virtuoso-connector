@@ -56,7 +56,7 @@
     "dotenv": "^16.0.1",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^9.0.0",
-    "husky": "^8.0.1",
+    "husky": "^9.1.0",
     "java": "^0.12.2",
     "jest": "^28.1.0",
     "jsonstream2": "^3.0.0",
