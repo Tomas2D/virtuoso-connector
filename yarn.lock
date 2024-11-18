@@ -793,9 +793,9 @@
     "@zazuko/prefixes" ">=1"
 
 "@tpluscode/sparql-builder@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-3.0.0.tgz#699896b797212aa2d7ecedc12e4479de9fbcd4aa"
-  integrity sha512-dlM7itc8dNeVeuVgHN0Ddc+9N5QN/ixxejPR3ET7XLU03Mu1MGOG9g0EUZnVQUnQeZOTKd5LDtRnSdokjpvpiA==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@tpluscode/sparql-builder/-/sparql-builder-3.0.1.tgz#8bae7b56b2a4d541ce9253363c77e6f7df9b13b7"
+  integrity sha512-edBrrB9z5NM1bqrc2U7rPO1KbkOO+q+MqUZP6d8pC8BtSdHfSniG+ypkKilpM7guAJtHTma0H5nq+qpobhfNng==
   dependencies:
     "@rdfjs/data-model" "^2"
     "@rdfjs/term-set" "^2"
