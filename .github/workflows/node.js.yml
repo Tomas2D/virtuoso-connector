@@ -29,11 +29,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.14.2
+          node-version: 22.x
       - name: Use Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9.12
+          python-version: "3.12"
+      - name: Use Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 8
       - name: 'yarn:install'
         run: yarn install
         env:
